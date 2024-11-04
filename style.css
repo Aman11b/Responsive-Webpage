@@ -1,0 +1,11 @@
+@import url(https://fonts.bunny.net/css?family=advent-pro:200,300);
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-family: 'Advent Pro', sans-serif;
+}
