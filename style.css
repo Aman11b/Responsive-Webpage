@@ -7,6 +7,7 @@
     --clr-text:#22092C;
     --clr-primary:#BE3144;
     --clr-accent:#DFF2EB;
+    --clr-hover:#F05941;
 
     --ff-title:'Abel', sans-serif;;
     --ff-serif:'Advent Pro', sans-serif;
@@ -63,6 +64,9 @@ img{
 section{
     padding:3em 1em;
 }
+.mb-0{
+    margin-bottom: 0;
+}
 .logo{
     font-family: var(--ff-logo);
     text-align: center;
@@ -94,7 +98,7 @@ nav a{
 }
 nav a:hover,
 nav a:focus{
-    color: var(--clr-accent);
+    color: var(--clr-hover);
     text-decoration: underline;
 }
 
@@ -114,13 +118,20 @@ nav a:focus{
     
    
 }
-
+.btn-accents{
+    background: var(--clr-primary);
+}
+.btn-accents:hover{
+    background: var(--clr-hover);
+}
 
 
 .btn-primary{
     background: var(--clr-primary);
 }
-
+.btn-primary:hover{
+    background: var(--clr-hover);
+}
 
 /* home page style */
 .hero{
@@ -158,12 +169,77 @@ nav a:focus{
 .products{
     display: flex;
     flex-direction: column;
+    max-width: 30rem;
 }
 .products{
-    /* background: #E9EED9; */
-    /* padding: 1em; */
-    border-radius: 1em;
-    /* border: 1px solid red; */
     overflow: hidden;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+
+}
+
+.products:last-of-type{
+    margin-bottom: 2em;
+}
+.product__content{
+    padding: 1.5em;
+}
+.product__title{
+    color: var(--clr-primary);
+    font-size: 2.5rem;
+    margin:1em 0 0 2em
+}
+.product__img{
+    justify-self: center;
+}
+.fine-print{
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+
+footer{
+    background: var(--clr-text);
+    padding: 3em 1em;
+    color: #DFF2EB;
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+.footer-social,
+.footer-nav{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+}
+footer a{
+    color: inherit;
+}
+.footer-nav a{
+    padding: 0.75em;
+    text-decoration: none;
+
+}
+
+.footer-nav a:hover{
+    text-decoration: underline;
+}
+
+
+.social-logo{
+    width: 50px;
+}
+.social-link{
+    padding: 5em;
+}
+
+@media only screen and (min-width:500px){
+    section{
+        padding: 6em 1em;
+    }
+    .about-us__intro,
+    .about-us__body{
+        padding: 6em;
+    }
 }
