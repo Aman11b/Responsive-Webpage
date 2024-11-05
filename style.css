@@ -47,6 +47,9 @@ h2{
 p{
     margin-bottom: .75em;
 }
+p+p:last-child{
+    margin-bottom: 0;
+}
 .section-title-small{
     font-size: 3rem;
 }
@@ -107,7 +110,9 @@ nav a:focus{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
 }
+
 .btn{
     padding: .75em 2.5em;
     color: white;
@@ -158,6 +163,7 @@ nav a:focus{
 .about-us__intro{
     background-image: url(../Responsive-Webpage/5.jpg);
     padding: 3em 1em 1.5em;
+    background-size: cover;
 }
 .about-us__body{
     padding: 1.5em 1em 3em;
@@ -169,23 +175,21 @@ nav a:focus{
 .products{
     display: flex;
     flex-direction: column;
-    max-width: 30rem;
+    max-width: 40rem;
+    justify-self: center;
 }
 .products{
     overflow: hidden;
 
 }
 
-.products:last-of-type{
-    margin-bottom: 2em;
-}
 .product__content{
     padding: 1.5em;
 }
 .product__title{
     color: var(--clr-primary);
     font-size: 2.5rem;
-    margin:1em 0 0 2em
+    margin:1em 0 0 1em;
 }
 .product__img{
     justify-self: center;
@@ -234,12 +238,44 @@ footer a{
     padding: 5em;
 }
 
-@media only screen and (min-width:500px){
+@media only screen and (min-width:550px){
     section{
         padding: 6em 1em;
+    }
+    .about-us{
+        flex-direction: row;
     }
     .about-us__intro,
     .about-us__body{
         padding: 6em;
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 3em;
+        justify-content: center;
+    }
+    .btn-group{
+        margin-top: 1em;
+        flex-direction: row;
+    }
+    .btn{
+        margin-left: 0.5em;
+    }
+    .about-us__body{
+        text-align: right;
+    }
+    .about-us__body>*{
+        max-width: 30rem;
+    }
+    .order-online>*{
+        max-width: 55ch;
+        max-width: 0 auto;
+        justify-self: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .order-online{
+        display: grid;
     }
 }
